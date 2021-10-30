@@ -89,7 +89,7 @@ def job_function2():
     records = data['records']
     for item in records:
         if item['County']=='高雄市' and item['SiteName']=='鳳山':
-            send_line('[MAXTEST-wakup-auto]%s>> AQI=%s' %(item['SiteName'], item['AQI']))
+            send_line('[MAXTEST-wakup-1321]%s>> AQI=%s' %(item['SiteName'], item['AQI']))
 
 def start_scheduler():
     scheduler = BackgroundScheduler()
@@ -98,7 +98,7 @@ def start_scheduler():
     scheduler.add_job(job_wakeup, 'cron', minute='*/10')
 
     # 每天早上6:30執行
-    scheduler.add_job(job_function2, 'cron', hour='3', minute='54')
+    scheduler.add_job(job_function2, 'cron', hour='13', minute='21')
     # scheduler.add_job(job_function2, 'cron', minute='*/1')
 
     # start the scheduler
