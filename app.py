@@ -92,13 +92,13 @@ def job_function2():
             send_line('[MAXTEST-wakup-auto_utc]%s>> AQI=%s' %(item['SiteName'], item['AQI']))
 
 def start_scheduler():
-    scheduler = BackgroundScheduler()
+    scheduler = BackgroundScheduler(timezone=utc)
 
     # run every 10 minute
     scheduler.add_job(job_wakeup, 'cron', minute='*/10')
 
     # 每天早上6:30執行
-    scheduler.add_job(job_function2, 'cron', hour='11', minute='40',timezone=utc)
+    scheduler.add_job(job_function2, 'cron', hour='11', minute='40')
     # scheduler.add_job(job_function2, 'cron', minute='*/1')
 
     # start the scheduler
