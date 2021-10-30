@@ -98,7 +98,7 @@ def start_scheduler():
     scheduler.add_job(job_wakeup, 'cron', minute='*/10')
 
     # 每天早上6:30執行
-    scheduler.add_job(job_function2, 'cron', hour='11', minute='40')
+    scheduler.add_job(job_function2, 'cron', hour='11', minute='42')
     # scheduler.add_job(job_function2, 'cron', minute='*/1')
 
     # start the scheduler
