@@ -142,7 +142,7 @@ def aqi_chart_24h():
         aqi_list.append( float(item['aqi']) )
 
     # plot
-    plt.plot(time,aqi_list,'b-o')
+    plt.plot(tm_start,aqi_list,'b-o')
     plt.grid()
     plt.savefig('img.png')
     plt.close()
