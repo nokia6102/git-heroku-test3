@@ -68,10 +68,15 @@ def map_kh_parking():
 
     return send_file('./map_kh_parking.html')
 
-
+"""
 @app.route("/homepage", methods=['GET'])
 def blog_index():
+    #只會送單檔
     return app.send_static_file('blog/index.html')
+"""
+@app.route('/homepage')
+def test():
+	return render_template('blog/index.html')
 
 @app.route("/map/w01-6", methods=['GET'])
 def map_w01_6():
