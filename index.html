@@ -45,6 +45,11 @@
                   }                  
                 }
               );
+              timerFlag = setTimeout(load_data, 30000); //Reload per 30 sec
+            }
+
+            function load_data2()
+            {
               $.get("/aqi/data/24h?sid=左營",
                 function(data)
                 {
@@ -63,7 +68,7 @@
                   }                  
                 }
               );
-              timerFlag = setTimeout(load_data, 30000); //Reload per 30 sec
+              timerFlag = setTimeout(load_data2, 30000); //Reload per 30 sec
             }
 
             function toYYYYMMDD(d) 
