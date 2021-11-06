@@ -74,10 +74,14 @@ def blog_index():
     #只會送單檔
     return app.send_static_file('blog/index.html')
 """
-@app.route('/second',methods=['GET'])
-def blog():
-	return render_template('blog/index.html')
-    
+# @app.route('/second',methods=['GET'])
+# def blog():
+# 	return render_template('blog/index.html')
+
+@app.route("/", methods=['GET'])
+def basic_url():
+    return app.send_static_file('index.html')
+
 @app.route("/map/w01-6", methods=['GET'])
 def map_w01_6():
     return app.send_static_file('W01-6.html')
