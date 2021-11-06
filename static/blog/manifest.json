@@ -7,12 +7,12 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "img/cafe_600.jpg",
+            "src": "img/my_600.jpg",
             "type": "image/jpg",
             "sizes": "600x600"
         },
         {
-            "src": "img/cafe_16.jpg",
+            "src": "img/my_16.jpg",
             "type": "image/jpg",
             "sizes": "16x16"
         }
