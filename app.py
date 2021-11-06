@@ -69,10 +69,14 @@ def map_kh_parking():
     return send_file('./map_kh_parking.html')
 
 
+@app.route("/blog", methods=['GET'])
+def blog_index():
+    return app.send_static_file('/blog/index.html')
+
 @app.route("/map/w01-6", methods=['GET'])
 def map_w01_6():
     return app.send_static_file('W01-6.html')
-
+    
 #-- W06 DB + web api
 @app.route('/aqi/data', methods=['GET'])
 def aqi_data():
