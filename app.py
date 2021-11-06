@@ -79,7 +79,7 @@ def blog_index():
 
 @app.route('/blog')
 def homepage():
-	return render_template('blog/index.html')
+	return send_static_file('blog/index.html')
     
 
 @app.route("/map/w01-6", methods=['GET'])
