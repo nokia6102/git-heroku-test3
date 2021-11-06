@@ -33,7 +33,7 @@ def basic_url():
     return app.send_static_file('index.html')   
 
 @app.route("/blog", methods=['GET'])
-def basic_url():
+def blog():
     return redirect('/blog/index.html')   
 
 @app.route("/hello", methods=['GET'])
