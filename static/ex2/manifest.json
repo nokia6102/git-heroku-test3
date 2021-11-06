@@ -1,0 +1,21 @@
+{
+    "name": "MAX' Resume",
+    "short_name": "MAX' ResumeAPP",
+    "start_url": "https://mx-cron2.herokuapp.com/blog/index.html",
+    "display": "standalone",
+    "background_color": "#EEEEEE",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "img/my_600.jpg",
+            "type": "image/jpg",
+            "sizes": "600x600"
+        },
+        {
+            "src": "img/my_16.jpg",
+            "type": "image/jpg",
+            "sizes": "16x16"
+        }
+
+    ]
+}
