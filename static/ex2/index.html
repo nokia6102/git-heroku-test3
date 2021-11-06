@@ -27,7 +27,7 @@
       
             function load_data()
             {
-              $.get("/aqi/data/24h?sid=楠梓",
+              $.get("/aqi/data/24h?sid=楠梓", //jquery
                 function(data)
                 {
                   console.log(data);
@@ -45,7 +45,8 @@
                   }                  
                 }
               );
-              $.get("/aqi/data/24h?sid=左營",
+
+              $.get("/aqi/data/24h?sid=左營", //jquery
                 function(data)
                 {
                   console.log(data);
@@ -59,12 +60,14 @@
                     console.log(my_data, len);
                     console.log(my_data[len-1])
                     //#$("#station1").text(my_data.uuid);
-                    $("#aqi1").text("AQI = " + my_data[len-1]['aqi']);
+                    $("#aqi2").text("AQI = " + my_data[len-1]['aqi']);
                   }                  
                 }
               );
+              
               timerFlag = setTimeout(load_data, 30000); //Reload per 30 sec
             }
+
 
             function toYYYYMMDD(d) 
             {
