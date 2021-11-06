@@ -30,7 +30,8 @@ app = Flask(__name__, static_url_path='', static_folder='static')
 
 @app.route("/", methods=['GET'])
 def basic_url():
-    return 'hello'
+    # return 'hello'
+    return app.send_static_file('index.html')   
 
 @app.route("/hello", methods=['GET'])
 def hello():
@@ -78,9 +79,6 @@ def blog_index():
 # def blog():
 # 	return render_template('blog/index.html')
 
-@app.route("/", methods=['GET'])
-def basic_url():
-    return app.send_static_file('index.html')
 
 @app.route("/map/w01-6", methods=['GET'])
 def map_w01_6():
